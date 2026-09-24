@@ -3,76 +3,60 @@
 namespace App\Controllers;
 
 use App\Controllers\BaseController;
+use App\Models\ConteudoModel;
 
 class ConteudoController extends BaseController
 {
-    public function index()
+    public function index():string
     {
-        $db = db_connect();
+      // 1. Instancia o Model
+ $conteudoModel = new ConteudoModel();
 
-        $query = $db->query("SELECT * FROM Conteudo WHERE Id = 1");
+ // 2. Busca o registro com Id = 1
+ $dados['conteudo'] = $conteudoModel->find(1);
 
-        $dados = $query->getRow();
-
-        return view('pagina_inicial', [
-            'titulo' => $dados->Titulo,
-            'texto' => $dados->Texto
-        ]);
+ // 3. Envia os dados para a view 'home'
+ return view('pagina_inicial', $dados);
     }
 
-    public function quemSou()
+    public function quem_sou():string
     {
-        $db = db_connect();
+       // 1. Instancia o Model
+ $conteudoModel = new ConteudoModel();
 
-        $query = $db->query("SELECT * FROM Conteudo WHERE Id = 2");
-
-        $dados = $query->getRow();
-
-        return view('quem_sou', [
-            'titulo' => $dados->Titulo,
-            'texto' => $dados->Texto
-        ]);
+ // 2. Busca o registro com Id = 1
+ $dados['conteudo'] = $conteudoModel->find(2);
+ // 3. Envia os dados para a view 'home'
+ return view('quem_sou', $dados);
     }
 
-    public function produtos()
+    public function produtos():string
     {
-        $db = db_connect();
-
-        $query = $db->query("SELECT * FROM Conteudo WHERE Id = 3");
-
-        $dados = $query->getRow();
-
-        return view('produtos', [
-            'titulo' => $dados->Titulo,
-            'texto' => $dados->Texto
-        ]);
+       // 1. Instancia o Model
+ $conteudoModel = new ConteudoModel();
+ // 2. Busca o registro com Id = 1
+ $dados['conteudo'] = $conteudoModel->find(3);
+ // 3. Envia os dados para a view 'home'
+ return view('produtos', $dados);
     }
 
-    public function sobre()
+    public function sobre():string
     {
-        $db = db_connect();
-
-        $query = $db->query("SELECT * FROM Conteudo WHERE Id = 4");
-
-        $dados = $query->getRow();
-
-        return view('sobre', [
-            'titulo' => $dados->Titulo,
-            'texto' => $dados->Texto
-        ]);
+       // 1. Instancia o Model
+ $conteudoModel = new ConteudoModel();
+ // 2. Busca o registro com Id = 1
+ $dados['conteudo'] = $conteudoModel->find(4);
+ // 3. Envia os dados para a view 'home'
+ return view('sobre', $dados);
     }
 
-    public function contato()
+    public function contato():string
     {
-        $db = db_connect();
-
-        $query = $db->query("SELECT * FROM Conteudo WHERE Id = 5");
-
-        $dados = $query->getRow();
-
-        return view('contato', [
-            'titulo' => $dados->Titulo,
-            'texto' => $dados->Texto
-        ]);
+        // 1. Instancia o Model
+ $conteudoModel = new ConteudoModel();
+ // 2. Busca o registro com Id = 1
+ $dados['conteudo'] = $conteudoModel->find(5);
+ // 3. Envia os dados para a view 'home'
+ return view('contato', $dados);
     }
 }

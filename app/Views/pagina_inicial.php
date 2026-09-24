@@ -1,19 +1,11 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
+<?php
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+namespace App\Controllers;
 
-    <title><?= $titulo ?></title>
-</head>
-
-<body>
-
-    <h1><?= $titulo ?></h1>
-
-    <p><?= $texto ?></p>
-
-</body>
-
-</html>
+class pagina_inicial extends BaseController
+{
+    public function index()
+    {
+        return view('pagina_inicial');
+    }
+}

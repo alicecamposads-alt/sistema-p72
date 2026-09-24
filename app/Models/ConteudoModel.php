@@ -6,13 +6,13 @@ use CodeIgniter\Model;
 
 class ConteudoModel extends Model
 {
-    protected $table            = 'conteudos';
-    protected $primaryKey       = 'id';
+    protected $table            = 'Conteudo';
+    protected $primaryKey       = 'Id';
     protected $useAutoIncrement = true;
     protected $returnType       = 'array';
     protected $useSoftDeletes   = false;
     protected $protectFields    = true;
-    protected $allowedFields    = [];
+    protected $allowedFields    = ['Titulo','Texto'];
 
     protected bool $allowEmptyInserts = false;
     protected bool $updateOnlyChanged = true;

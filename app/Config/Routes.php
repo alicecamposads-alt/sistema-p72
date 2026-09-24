@@ -2,11 +2,9 @@
 
 use CodeIgniter\Router\RouteCollection;
 
-/**
- * @var RouteCollection $routes
- */
+/** @var RouteCollection $routes */
 
-$routes->get('/', 'ConteudoController::index');
+$routes->get('/', 'Pagina inicial::index');
 
 $routes->get('/pagina_inicial', 'ConteudoController::index');
 
