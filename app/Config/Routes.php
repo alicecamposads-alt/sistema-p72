@@ -4,11 +4,11 @@ use CodeIgniter\Router\RouteCollection;
 
 /** @var RouteCollection $routes */
 
-$routes->get('/', 'Pagina inicial::index');
-
 $routes->get('/pagina_inicial', 'ConteudoController::index');
 
-$routes->get('/quem_sou', 'ConteudoController::quemSou');
+$routes->get('/home', 'ConteudoController::index');
+
+$routes->get('/quem_sou', 'ConteudoController::quem_sou');
 
 $routes->get('/produtos', 'ConteudoController::produtos');
 

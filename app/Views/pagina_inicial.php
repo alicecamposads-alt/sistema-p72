@@ -1,11 +1,5 @@
-<?php
-
-namespace App\Controllers;
-
-class pagina_inicial extends BaseController
-{
-    public function index()
-    {
-        return view('pagina_inicial');
-    }
-}
+<?= $this->extend('layout/main') ?>
+<?= $this->section('conteudo') ?>
+<h1><?= $conteudo['Titulo']; ?></h1>
+<p><?= $conteudo['Texto']; ?></p>
+<?= $this->endSection() ?>
