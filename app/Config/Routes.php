@@ -6,8 +6,6 @@ use CodeIgniter\Router\RouteCollection;
 
 $routes->get('/pagina_inicial', 'ConteudoController::index');
 
-$routes->get('/home', 'ConteudoController::index');
-
 $routes->get('/quem_sou', 'ConteudoController::quem_sou');
 
 $routes->get('/produtos', 'ConteudoController::produtos');

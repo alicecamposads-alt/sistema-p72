@@ -4,19 +4,13 @@ namespace App\Controllers;
 
 class Home extends BaseController
 {
-    public function home(): string
+   public function pagina_inicial(): string
     {
-        return view('home');
+        return view('pagina_inicial');
     }
-
     public function contato(): string
     {
         return view('contato');
-    }
-
-    public function pagina_inicial(): string
-    {
-        return view('pagina_inicial');
     }
 
     public function produtos(): string

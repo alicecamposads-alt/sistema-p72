@@ -1,8 +1,8 @@
 <nav class="navbar">
 
-    <a href="<?= site_url('home') ?>" 
-       class="nav-link <?= url_is('home') ? 'active' : '' ?>">
-        Home
+ <a href="<?= site_url('pagina_inicial') ?>" 
+       class="nav-link <?= url_is('pagina_inicial') ? 'active' : '' ?>">
+        Página Inicial
     </a>
 
     <a href="<?= site_url('contato') ?>" 
@@ -10,10 +10,6 @@
         Contato
     </a>
 
-    <a href="<?= site_url('pagina_inicial') ?>" 
-       class="nav-link <?= url_is('pagina_inicial') ? 'active' : '' ?>">
-        Página Inicial
-    </a>
 
     <a href="<?= site_url('produtos') ?>" 
        class="nav-link <?= url_is('produtos') ? 'active' : '' ?>">
